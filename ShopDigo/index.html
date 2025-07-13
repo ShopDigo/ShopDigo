@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopdigo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Shopdigo</h1>
+    <input type="text" placeholder="Search products..." id="searchBar" />
+    <nav>
+      <a href="cart.html">Cart</a>
+      <span id="userGreeting"></span>
+      <a href="login.html" id="authBtn">Login</a>
+    </nav>
+  </header>
+  <section id="filters">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="men">Men</option>
+      <option value="women">Women</option>
+    </select>
+    <select id="sortPrice">
+      <option value="default">Sort by Price</option>
+      <option value="low">Low to High</option>
+      <option value="high">High to Low</option>
+    </select>
+  </section>
+  <main id="productGrid"></main>
+  <footer>
+    <p><strong>Contact Us:</strong> Facebook | Instagram | +91 99999 99999 | shopdigo@gmail.com</p>
+    <p>&copy; 2025 Shopdigo</p>
+  </footer>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
