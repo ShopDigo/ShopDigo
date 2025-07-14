@@ -1,1 +1,32 @@
-<!DOCTYPE html><html><head><title>Cart</title></head><body><h2>Your Cart</h2><p>Cart coming soon.</p></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - ShopDigo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛍 Cart</h1>
+    <nav><a href="index.html">🏠 Home</a></nav>
+  </header>
+  <main>
+    <h2>Items in your cart</h2>
+    <ul id="cart-items"></ul>
+    <a href="success.html"><button>Checkout</button></a>
+  </main>
+  <script src="products.js"></script>
+  <script>
+    const cartList = document.getElementById("cart-items");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const items = cart.map(id => products.find(p => p.id === id));
+    items.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - ₹${item.price}`;
+      cartList.appendChild(li);
+    });
+  </script>
+</body>
+</html>

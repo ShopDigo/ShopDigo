@@ -2,24 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - Shopdigo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - ShopDigo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Login to Shopdigo</h2>
-  <form id="loginForm">
-    <input type="text" id="name" placeholder="Your name" required />
-    <button type="submit">Login</button>
-  </form>
+  <header><h1>Login</h1></header>
+  <main>
+    <form onsubmit="handleLogin(event)">
+      <label>Email: <input type="email" required></label><br><br>
+      <label>Password: <input type="password" required></label><br><br>
+      <button type="submit">Login</button>
+    </form>
+  </main>
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
+    function handleLogin(e) {
       e.preventDefault();
-      const name = document.getElementById("name").value;
-      localStorage.setItem("shopdigoUser", JSON.stringify({ name }));
-      window.location.href = "index.html";
-    });
+      alert('Logged in successfully!');
+      window.location.href = 'index.html';
+    }
   </script>
 </body>
 </html>

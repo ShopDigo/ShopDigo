@@ -1,14 +1,6 @@
 
 const products = [
-  { name: "T-Shirt", price: 499 },
-  { name: "Jeans", price: 999 },
-  { name: "Jacket", price: 1499 }
+  { id: 1, name: "T-Shirt", price: 499 },
+  { id: 2, name: "Jeans", price: 999 },
+  { id: 3, name: "Jacket", price: 1499 }
 ];
-const grid = document.getElementById("productGrid");
-if (grid) {
-  products.forEach(p => {
-    const div = document.createElement("div");
-    div.textContent = `${p.name} - ₹${p.price}`;
-    grid.appendChild(div);
-  });
-}
